@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosy Petal Top - Atasan Merah Putih Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-blue': '#003366',
+                        'ocean-blue': '#0066cc',
+                        'sky-blue': '#87ceeb',
+                        'foam-white': '#f0f8ff',
+                        'coral': '#ff6b6b',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-overlay {
+            background: linear-gradient(135deg, rgba(0, 51, 102, 0.9) 0%, rgba(0, 102, 204, 0.8) 50%, rgba(135, 206, 235, 0.7) 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .product-gallery {
+            scrollbar-width: thin;
+            scrollbar-color: #0066cc #f0f8ff;
+        }
+        .product-gallery::-webkit-scrollbar {
+            height: 6px;
+        }
+        .product-gallery::-webkit-scrollbar-track {
+            background: #f0f8ff;
+            border-radius: 10px;
+        }
+        .product-gallery::-webkit-scrollbar-thumb {
+            background-color: #0066cc;
+            border-radius: 10px;
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .price-tag {
+            position: relative;
+            display: inline-block;
+        }
+        .price-tag::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #ff6b6b;
+            transform: rotate(-5deg);
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .sticky-cta {
+            transition: all 0.3s ease;
+        }
+        .sticky-cta.show {
+            bottom: 20px;
+            opacity: 1;
+        }
+        .sticky-cta.hide {
+            bottom: -100px;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="font-inter bg-foam-white text-deep-blue" style="font-family: 'Inter', sans-serif;">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="font-playfair text-2xl font-bold text-deep-blue">Rosy Petal</span>
+                <span class="bg-coral text-white text-xs px-2 py-1 rounded-full">Top</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#features" class="hover:text-ocean-blue transition">Fitur</a>
+                <a href="#gallery" class="hover:text-ocean-blue transition">Galeri</a>
+                <a href="#testimonials" class="hover:text-ocean-blue transition">Testimoni</a>
+                <a href="#order" class="hover:text-ocean-blue transition">Pesan Sekarang</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-deep-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://down-id.img.susercontent.com/file/sg-11134201-7rdvv-lxkgr6na17u1a8@resize_w450_nl.webp');">
+        <div class="absolute inset-0 gradient-overlay"></div>
+        <div class="container mx-auto px-4 z-10 text-center">
+            <h1 class="font-poppins text-4xl md:text-6xl font-bold text-white mb-4">Rosy Petal Top</h1>
+            <p class="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto">Atasan Merah Putih 17 Agustus OOTD Wanita Muslim Premium</p>
+            <div class="glass-card inline-block px-6 py-4 rounded-lg mb-8">
+                <p class="text-white font-medium">Harga Promo: <span class="text-2xl font-bold">Rp225.000</span></p>
+                <p class="text-white text-sm"><span class="price-tag">Rp368.000</span> Hemat Rp143.000</p>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#order" class="bg-coral hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105">Pesan Sekarang</a>
+                <a href="#features" class="bg-white hover:bg-opacity-90 text-deep-blue font-bold py-3 px-8 rounded-full transition transform hover:scale-105">Lihat Detail</a>
+            </div>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <div class="flex items-center text-white">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span>Bahan Premium</span>
+                </div>
+                <div class="flex items-center text-white">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span>Free Ongkir</span>
+                </div>
+                <div class="flex items-center text-white">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span>Garansi Kualitas</span>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
+            <a href="#features" class="text-white">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold text-deep-blue mb-4">Keunggulan Rosy Petal Top</h2>
+                <div class="w-20 h-1 bg-coral mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 rounded-lg bg-foam-white hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-ocean-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Bahan Toyobo Premium</h3>
+                    <p class="text-gray-600">Menggunakan bahan dengan hasil pemilihan terbaik sehingga mempunyai kualitas yang bagus</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg bg-foam-white hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-ocean-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Jahitan Premium</h3>
+                    <p class="text-gray-600">Penjahit berpengalaman lebih dari 10 tahun sehingga jahitan rapi, kuat dan awet</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg bg-foam-white hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-ocean-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Desain Kekinian</h3>
+                    <p class="text-gray-600">Desain yang trendy sehingga membuat sist/sista percaya diri</p>
+                </div>
+                
+                <div class="text-center p-6 rounded-lg bg-foam-white hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-ocean-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Multifungsi</h3>
+                    <p class="text-gray-600">Cocok digunakan di segala macam acara sehingga membuat anda tampil percaya diri dan tampil beda</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 grid md:grid-cols-2 gap-8 items-center">
+                <div class="animate-float">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdvv-lxkgr6na17u1a8.webp" alt="Rosy Petal Top" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div>
+                    <h3 class="font-playfair text-2xl font-bold text-deep-blue mb-4">Spesifikasi Produk</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-ocean-blue mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><strong>Bahan:</strong> Toyobo Premium Apk Payet</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-ocean-blue mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><strong>Ukuran:</strong> All size fit to XL</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-ocean-blue mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><strong>Ld:</strong> 110 cm</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-ocean-blue mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><strong>P. Lengan:</strong> 55 cm</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-ocean-blue mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><strong>P. Baju Depan:</strong> 70 cm</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-ocean-blue mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><strong>P. Baju Belakang:</strong> 75 cm</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-ocean-blue mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><strong>Toleransi ukuran:</strong> 1-2 cm</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-foam-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold text-deep-blue mb-4">Galeri Produk</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Lihat berbagai angle dari Rosy Petal Top yang elegan dan stylish</p>
+            </div>
+            
+            <div class="product-gallery overflow-x-auto pb-4 flex gap-4">
+                <div class="flex-none w-64 h-64 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rbmn-m5zlbfzagcbcf3.webp" alt="Rosy Petal Top Angle 1" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-none w-64 h-64 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdvv-lxkgr6na17u1a8.webp" alt="Rosy Petal Top Angle 2" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-none w-64 h-64 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdvl-lxkgr6t3r9nj85.webp" alt="Rosy Petal Top Angle 3" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-none w-64 h-64 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdw3-lxkgr6ynj5xm74.webp" alt="Rosy Petal Top Angle 4" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-none w-64 h-64 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdvl-lxkgr6t3r9nj85@resize_w450_nl.webp" alt="Rosy Petal Top Warna Putih" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold text-deep-blue mb-4">Apa Kata Mereka?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Testimoni jujur dari pelanggan kami yang sudah membeli Rosy Petal Top</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="testimonial-card bg-foam-white p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pinimg.com/736x/f2/71/bb/f271bb464363aa3a1a4cd41816127c58.jpg" alt="N*****a" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">N*****a</h4>
+                            <div class="flex text-yellow-400">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Bahan sangat nyaman dipakai, jahitan rapi dan kualitas premium. Worth it banget!"</p>
+                    <img src="https://down-id.img.susercontent.com/file/id-11134103-7r990-lzj0r1k67vu0aa.webp" alt="Testimoni N*****a" class="w-full h-48 object-cover rounded">
+                </div>
+                
+                <div class="testimonial-card bg-foam-white p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pinimg.com/736x/74/52/f5/7452f5448ddf386c4ab6660bf10dfcbb.jpg" alt="Dahniartawainella" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Dahniartawainella</h4>
+                            <div class="flex text-yellow-400">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Pas banget ukurannya, bahannya adem dan nyaman dipakai seharian. Rekomended!"</p>
+                    <video controls class="w-full h-48 object-cover rounded">
+                        <source src="https://down-tx-sg.vod.susercontent.com/api/v4/11110103/mms/id-11110103-6ke1e-lxyrdkblwo4e14.16000081721867437.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <div class="testimonial-card bg-foam-white p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pinimg.com/736x/76/68/7b/76687be0c46e5bf397b4d2cf4ae1993e.jpg" alt="Melinda" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Melinda</h4>
+                            <div class="flex text-yellow-400">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.� 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Desainnya sangat kekinian, cocok untuk berbagai acara. Banyak yang nanya beli dimana!"</p>
+                    <img src="https://down-id.img.susercontent.com/file/id-11134103-7r98o-ly7ij8r33m571a.webp" alt="Testimoni Melinda" class="w-full h-48 object-cover rounded">
+                </div>
+                
+                <div class="testimonial-card bg-foam-white p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://i.pinimg.com/736x/30/ab/94/30ab94ebeaeda923e9563ec1bd66d7a5.jpg" alt="Rifa25" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Rifa25</h4>
+                            <div class="flex text-yellow-400">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Pengiriman cepat, packing rapi, dan kualitas produk sesuai ekspektasi. Puas banget!"</p>
+                    <img src="https://down-id.img.susercontent.com/file/id-11134103-7r98q-lxzf9m9cweaj3a.webp" alt="Testimoni Rifa25" class="w-full h-48 object-cover rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-16 bg-gradient-to-r from-deep-blue to-ocean-blue">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="font-playfair text-3xl md:text-4xl font-bold text-white mb-4">Harga Spesial Hari Ini</h2>
+            <p class="text-foam-white mb-8 max-w-2xl mx-auto">Dapatkan diskon spesial untuk pembelian hari ini saja!</p>
+            
+            <div class="glass-card inline-block px-8 py-6 rounded-lg mb-8">
+                <p class="text-white text-xl mb-2">Harga Normal</p>
+                <p class="text-white text-3xl font-bold mb-4"><span class="price-tag">Rp368.000</span></p>
+                <p class="text-white text-xl mb-2">Harga Promo</p>
+                <p class="text-white text-4xl font-bold mb-4">Rp225.000</p>
+                <p class="text-coral font-bold">Hemat Rp143.000!</p>
+            </div>
+            
+            <div class="bg-white rounded-lg p-6 max-w-2xl mx-auto mb-8 shadow-lg">
+                <div class="flex items-center justify-center mb-4">
+                    <svg class="w-6 h-6 text-yellow-400 mr-2 animate-pulse" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="font-bold text-deep-blue text-lg">PROMO TERBATAS! Berakhir Dalam:</span>
+                </div>
+                <div id="countdown" class="grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-deep-blue text-white py-3 px-4 rounded-lg">
+                        <div id="hours" class="text-3xl font-bold">00</div>
+                        <div class="text-sm">Jam</div>
+                    </div>
+                    <div class="bg-deep-blue text-white py-3 px-4 rounded-lg">
+                        <div id="minutes" class="text-3xl font-bold">00</div>
+                        <div class="text-sm">Menit</div>
+                    </div>
+                    <div class="bg-deep-blue text-white py-3 px-4 rounded-lg">
+                        <div id="seconds" class="text-3xl font-bold">00</div>
+                        <div class="text-sm">Detik</div>
+                    </div>
+                </div>
+                <div class="mt-4 text-center text-sm text-gray-600">
+                    <p>Harga akan kembali normal setelah waktu habis!</p>
+                </div>
+            </div>
+            
+            <div class="flex justify-center">
+                <a href="#order" class="bg-coral hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105">Pesan Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order" class="py-16 bg-foam-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold text-deep-blue mb-4">Form Pemesanan</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Isi form berikut untuk memesan Rosy Petal Top dengan harga spesial</p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="p-6 sm:p-8">
+                    <!-- OrderOnline Embed Code - v8.0.4 -->
+                    <div class="ooef">
+                        <form class="orderonline-embed-form" data-username="mila" data-product-slug="rosy-petal-top" data-product-id="686287de028e46cd6a0094f5" id="oo-embed-form-rosy-petal-top-530" data-origin="orderonline">
+                            <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div>
+                        </form>
+                    </div>
+                    <script>
+                        if (typeof xLogError != 'function') {
+                            var xLogError = function (error) {
+                                var req = new XMLHttpRequest();
+                                var payload = JSON.stringify({
+                                    url: document.location.href,
+                                    line: error.line,
+                                    stack: error.stack
+                                });
+                                var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                                req.open('POST', 'https://api.orderonline.id/log', true);
+                                req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                                req.send(params);
+                            };
+                        }
+                        try {
+                            if (typeof xEmbedScript != 'function') {
+                                var xEmbedScript = function () {
+                                    !function(w, d, e, v, id, t, s) {
+                                        if (d.getElementById(id)) return;
+                                        t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                        s = d.getElementsByTagName(e)[0];
+                                        s.parentNode.insertBefore(t, s);
+                                    }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                                };
+                            }
+                            if (typeof xEmbedInit != 'function') {
+                                var xEmbedInit = function (w, n) {
+                                    if (w.ooe) return;
+                                    n = w.ooe = function() {
+                                        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                                    };
+                                    if (!w._ooe) w._ooe = n;
+                                    n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
+                                };
+                            }
+                            xEmbedInit(window);
+                            ooe('setup', 'redirect', 'https://mila.orderonline.id');
+                            ooe('init', '5f1a7b8fa9bf807da24d83bb', '686287de028e46cd6a0094f5', '686287de028e46cd6a0094f6', 'oo-embed-form-rosy-petal-top-530', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":false});
+                            if (!window.jQuery) {
+                                !function(w, d, e, v, id, t, s) {
+                                    if (d.getElementById(id)) return;
+                                    t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                    t.addEventListener('load', xEmbedScript);
+                                    s = d.getElementsByTagName(e)[0];
+                                    s.parentNode.insertBefore(t, s);
+                                }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+                            } else {
+                                xEmbedScript();
+                            }
+                        } catch (e) {
+                            xLogError(e);
+                            throw e;
+                        }
+                    </script>
+                    <!-- End OrderOnline Embed Code -->
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-poppins text-3xl md:text-4xl font-bold text-deep-blue mb-4">Pertanyaan yang Sering Diajukan</h2>
+                <div class="w-20 h-1 bg-coral mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-4 bg-foam-white hover:bg-opacity-80 transition">
+                        <span class="font-bold text-left">Berapa lama waktu pengiriman?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-4 pb-4">
+                        <p class="text-gray-600">Waktu pengiriman bervariasi tergantung lokasi Anda. Untuk wilayah Jabodetabek biasanya 1-2 hari kerja, sedangkan luar kota 2-5 hari kerja. Kami akan memberikan nomor resi setelah paket dikirim.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-4 bg-foam-white hover:bg-opacity-80 transition">
+                        <span class="font-bold text-left">Apakah produk ini ready stock?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-4 pb-4">
+                        <p class="text-gray-600">Ya, produk ini ready stock dan siap dikirim dalam 1x24 jam setelah pembayaran dikonfirmasi. Kami selalu update ketersediaan stok di website.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-4 bg-foam-white hover:bg-opacity-80 transition">
+                        <span class="font-bold text-left">Bagaimana cara mengetahui ukuran yang cocok?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-4 pb-4">
+                        <p class="text-gray-600">Rosy Petal Top didesain dengan ukuran all size fit to XL yang cocok untuk berbagai postur tubuh. Anda bisa merujuk pada detail ukuran di bagian spesifikasi produk. Jika masih ragu, tim kami siap membantu via chat.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-6 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-4 bg-foam-white hover:bg-opacity-80 transition">
+                        <span class="font-bold text-left">Apakah ada garansi untuk produk ini?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-4 pb-4">
+                        <p class="text-gray-600">Kami memberikan garansi 100% kepuasan pelanggan. Jika produk yang Anda terima cacat atau tidak sesuai pesanan, Anda dapat mengembalikan dalam waktu 7 hari setelah barang diterima untuk penggantian atau refund.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-4 bg-foam-white hover:bg-opacity-80 transition">
+                        <span class="font-bold text-left">Bagaimana cara perawatan produk ini?</span>
+                        <svg class="w-5 h-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden px-4 pb-4">
+                        <p class="text-gray-600">Untuk perawatan terbaik, kami rekomendasikan mencuci dengan tangan menggunakan detergen lembut dan tidak menggunakan pemutih. Hindari mesin cuci untuk menjaga bahan tetap awet. Setrika dengan suhu sedang di bagian dalam pakaian.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky CTA Button (initially hidden) -->
+    <div class="sticky-cta hide fixed left-1/2 transform -translate-x-1/2 z-50 bg-coral text-white px-6 py-3 rounded-full shadow-lg">
+        <a href="#order" class="flex items-center">
+            <span class="font-bold">Pesan Sekarang</span>
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-deep-blue text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Rosy Petal Top. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            // Set countdown to end at midnight tonight
+            const endOfDay = new Date();
+            endOfDay.setHours(24, 0, 0, 0);
+            
+            const diff = endOfDay - now;
+            
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            
+            if (diff <= 0) {
+                clearInterval(countdownInterval);
+            }
+        }
+        
+        // Initialize countdown
+        updateCountdown();
+        const countdownInterval = setInterval(updateCountdown, 1000);
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('svg');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Sticky CTA Button
+        window.addEventListener('scroll', function() {
+            const cta = document.querySelector('.sticky-cta');
+            if (window.scrollY > 300) {
+                cta.classList.remove('hide');
+                cta.classList.add('show');
+            } else {
+                cta.classList.remove('show');
+                cta.classList.add('hide');
+            }
+        });
+    </script>
+</body>
+</html>
